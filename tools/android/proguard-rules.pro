@@ -8,3 +8,9 @@
 # The native PDF print code in MainActivity is invoked through a
 # MethodChannel (no reflection), and MainActivity itself is kept because
 # it is the manifest's launcher activity.
+
+# google_mlkit_text_recognition references optional ML Kit script modules
+# (chinese, devanagari, japanese, korean) that are not on the compile
+# classpath. R8 treats those references as errors in release builds;
+# silence them — only the latin model is bundled and used.
+-dontwarn com.google.mlkit.**
