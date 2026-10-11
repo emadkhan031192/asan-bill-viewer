@@ -1,0 +1,65 @@
+name: asan_bill_viewer
+description: View Pakistani utility bills from official sources only. Everything stays on your phone.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+
+  # State
+  flutter_riverpod: ^2.5.1
+
+  # Bill viewer
+  webview_flutter: ^4.9.0
+
+  # Scan (on-device OCR + camera + gallery)
+  google_mlkit_text_recognition: ^0.13.1
+  camera: ^0.11.0
+  image_picker: ^1.1.2
+  permission_handler: ^11.3.1
+
+  # Storage / sharing
+  path_provider: ^2.1.4
+  shared_preferences: ^2.2.3
+  share_plus: ^10.1.2
+  open_filex: ^4.7.0
+  package_info_plus: ^8.0.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  fonts:
+    - family: Sora
+      fonts:
+        - asset: assets/fonts/Sora-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Sora-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Sora-Bold.ttf
+          weight: 700
+    - family: Manrope
+      fonts:
+        - asset: assets/fonts/Manrope-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Manrope-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Manrope-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Manrope-Bold.ttf
+          weight: 700
+    - family: NotoNastaliqUrdu
+      fonts:
+        - asset: assets/fonts/NotoNastaliqUrdu-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/NotoNastaliqUrdu-Bold.ttf
+          weight: 700
