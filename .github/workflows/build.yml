@@ -30,6 +30,9 @@ jobs:
         run: |
           if [ ! -d android ]; then
             flutter create --platforms=android --org dev.asanbill --project-name asan_bill_viewer .
+            # flutter create regenerates the template widget test, which references
+            # MyApp and would fail flutter analyze. We ship our own tests instead.
+            rm -f test/widget_test.dart
           fi
           bash tools/patch_android.sh
 
